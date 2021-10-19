@@ -2,6 +2,7 @@ const tagsEl = document.querySelector(".tags");
 const textarea = document.querySelector("textarea");
 
 textarea.addEventListener("keyup", (e) => {
+    if(e.target.value == "")return;
     createElement(e.target.value);
 
     if (e.key == "Enter") {
